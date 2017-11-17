@@ -1,5 +1,8 @@
 angular.module('trendingTrivia').service('questionSrvc', function($http) {
-  let baseUrl = 'practiceapi.devmountain.com';
+  
+  // secure connection!
+  let baseUrl = 'https://practiceapi.devmountain.com';
+  // question is an object { question, animal, difficulty, options: {1, 2, 3, 4}, correct_answer:, date_entered: { type, default} }
   this.createQuestion = function(question) {
     return $http.post(baseUrl + '/api/trivia/questions', question);
   }
