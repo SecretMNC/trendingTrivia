@@ -1,5 +1,6 @@
-angular.module('trendingTrivia').service('questionSrvc', function($http) {
-  let baseUrl = 'practiceapi.devmountain.com';
+angular.module('triviaTrends').service('questionSrvc', function($http) {
+  let baseUrl = 'https://practiceapi.devmountain.com';
+  
   this.createQuestion = function(question) {
     return $http.post(baseUrl + '/api/trivia/questions', question);
   }
