@@ -3,14 +3,14 @@ angular.module('triviaTrends', [ui.router]).config( function($stateProvider, $ur
     $stateProvider
     .state('home', {
         url:'/',
-        templateUrl: 'app/'
-    }).state('questionlist', {
-        url:'/questionlist',
-        templateUrl:'app/'
-    }).state('questioneditor', {
-        url:'/questioneditor',
-        templateUrl:'app/'
-    })
+        templateUrl: 'app/'})
+    // .state('questionlist', {
+    //     url:'/questionlist',
+    //     templateUrl:'app/'
+    // }).state('questioneditor', {
+    //     url:'/questioneditor',
+    //     templateUrl:'app/'
+    // })
 
     $urlRouterProvider
     .otherwise('/')
