@@ -21,7 +21,5 @@ angular.module('triviaTrends').service('questionSrvc', function($http) {
     }
   }
   
-  this.getQuestionByDifficulty = function(difficulty) {
-    return $http.get(baseUrl + '/api/trivia/questions/difficulty/:difficulty');
-  }
+  
 })

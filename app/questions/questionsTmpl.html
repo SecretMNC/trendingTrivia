@@ -1,5 +1,16 @@
-<ul ng-repeat="question in questionsCtrl.allQuestions">
-    <li>
-        {{question.question}}
-    </li>
-</ul>
+<div ng-repeat="question in questionsCtrl.allQuestions | filter: {difficulty: questionsCtrl.difficulty, animal:questionsCtrl.searchAnimal}" class="question-wrapper">
+    
+    <h3> {{question.question}}</h3>
+    <div class="{{questionsCtrl.difficulties[question.difficulty]}}"> {{questionsCtrl.difficulties[question.difficulty]}} </div>
+
+    <div class="gear">
+      <img src="/styles/assets/gear.svg" alt="">
+    </div>
+    <ul>
+      <li ng-repeat="option in question.options"> 
+        <input name="radio" type="radio"> <!-- same radio names restrict to one toggle -->
+          <label>{{option}}</label>
+      </li>
+    </ul>
+    
+    </div>
